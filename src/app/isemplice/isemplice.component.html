@@ -1,0 +1,14 @@
+<table id="datatable-full" class="table table-striped dt-responsive nowrap w-100">
+    <thead>
+        <tr>
+            <th>IDIntervento</th>
+            <th>IDPersonale</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of gestore.isemplice">
+            <td>{{x.IDIntervento}}</td>
+            <td>{{x.IDPersonale}}</td>
+        </tr>
+    </tbody>
+</table>
