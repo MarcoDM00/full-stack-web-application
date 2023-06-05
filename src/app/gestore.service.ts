@@ -59,8 +59,8 @@ export class GestoreService {
   getInterventi():any {
     this.http.get<any[]>("http://127.0.0.1:8080/interventi").subscribe(
       res => {
+        this.interventi = [];
         res.forEach(x => {
-          this.interventi = [];
           this.interventi.push({ID:x["ID"], DataOra:x["DataOra"], Nota:x["Nota"], Report:x["Report"]});
         });
       },
