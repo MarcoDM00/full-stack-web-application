@@ -1,3 +1,35 @@
+form (submit)="gestore.insertisemplice(idintervento, idpersonale); idintervento = idpersonale = 1;">
+    <mat-form-field>
+        <input
+        matInput
+        type="number"
+        name="IDIntervento"
+        required
+        minlength="4"
+        placeholder="IDIntervento"
+        [(ngModel)]="idintervento">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input
+        matInput
+        type="number"
+        name="IDPersonale"
+        required
+        minlength="4"
+        placeholder="IDPersonale"
+        [(ngModel)]="idpersonale">
+    </mat-form-field>
+    <div style="text-align: center;">
+        <button
+            mat-raised-button
+            color="primary"
+            type="sumbit">
+            Inserisci
+        </button>
+    </div>
+</form>
+
 <table id="datatable-full" class="table table-striped dt-responsive nowrap w-100">
     <thead>
         <tr>
