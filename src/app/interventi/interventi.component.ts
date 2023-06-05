@@ -7,5 +7,10 @@ import { GestoreService } from '../gestore.service';
   styleUrls: ['./interventi.component.css']
 })
 export class InterventiComponent {
+  dataora: string = " ";
+  nota : string = " ";
+  report: string = " ";
+
   constructor(public gestore:GestoreService){}
+
 }

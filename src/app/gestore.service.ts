@@ -56,7 +56,6 @@ export class GestoreService {
     )
   }
 
-
   getInterventi():any {
     this.http.get<any[]>("http://127.0.0.1:8080/interventi").subscribe(
       res => {
@@ -84,11 +83,10 @@ export class GestoreService {
       }
     );
   }
-  
-  insertisemplice(idintervento, idpersonale) {
-    this.http.post("http://127.0.0.1:8080", {"tabella":"personale", "idintervento":idintervento, "idpersonale":idpersonale}).subscribe(
+  insertInterventi(dataora, nota, report) {
+    this.http.post("http://127.0.0.1:8080", {"tabella":"interventi", "dataora":dataora, "nota":nota, "report":report}).subscribe(
       res => {
-        this.getISemplice();
+        this.getInterventi();
       },
       err => {
         console.log(err);
@@ -96,4 +94,3 @@ export class GestoreService {
     )
   }
 }
-

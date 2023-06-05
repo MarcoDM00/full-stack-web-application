@@ -1,3 +1,46 @@
+<form (submit)="gestore.insertinterventi(dataora, nota, report); dataora = nota = report = ' '">
+    <mat-form-field>
+        <input
+        matInput
+        type="text"
+        name="dataora"
+        required
+        minlength="4"
+        placeholder="dataora"
+        [(ngModel)]="dataora">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input
+        matInput
+        type="text"
+        name="nota"
+        required
+        minlength="4"
+        placeholder="nota"
+        [(ngModel)]="nota">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input
+        matInput
+        type="text"
+        name="report"
+        required
+        minlength="4"
+        placeholder="report"
+        [(ngModel)]="report">
+    </mat-form-field>
+    <div style="text-align: center;">
+        <button
+            mat-raised-button
+            color="primary"
+            type="sumbit">
+            Inserisci
+        </button>
+    </div>
+</form>s
+
 <table id="datatable-full" class="table table-striped dt-responsive nowrap w-100">
     <thead>
         <tr>
