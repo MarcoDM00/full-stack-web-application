@@ -7,7 +7,7 @@ import { GestoreService } from '../gestore.service';
   styleUrls: ['./isemplice.component.css']
 })
 export class IsempliceComponent {
-  idintervento: number = 1;
-  idpersonale: number = 1;
+  idintervento: number;
+  idpersonale: number;
   constructor(public gestore:GestoreService){}
 }

@@ -70,6 +70,17 @@ export class GestoreService {
     );
   }
 
+  insertInterventi(dataora, nota, report) {
+    this.http.post("http://127.0.0.1:8080", {"tabella":"interventi", "dataora":dataora, "nota":nota, "report":report}).subscribe(
+      res => {
+        this.getInterventi();
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  }
+
   getISemplice():any {
     this.http.get<any[]>("http://127.0.0.1:8080/isemplice").subscribe(
       res => {
@@ -83,10 +94,11 @@ export class GestoreService {
       }
     );
   }
-  insertInterventi(dataora, nota, report) {
-    this.http.post("http://127.0.0.1:8080", {"tabella":"interventi", "dataora":dataora, "nota":nota, "report":report}).subscribe(
+
+  insertISemplice(idintervento, idpersonale) {
+    this.http.post("http://127.0.0.1:8080", {"tabella":"isemplice", "idintervento":idintervento, "idpersonale":idpersonale}).subscribe(
       res => {
-        this.getInterventi();
+        this.getISemplice();
       },
       err => {
         console.log(err);

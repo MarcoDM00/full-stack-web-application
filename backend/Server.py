@@ -23,7 +23,6 @@ class Server():
     @cherrypy.tools.json_in()
     @cherrypy.tools.json_out()
     def POST(self):
-        print("Ciao")
         data = cherrypy.request.json
         print(data)
         tabella = data["tabella"]

@@ -11,6 +11,6 @@ export class PersonaleComponent {
   cognome:string = "";
   email:string = "";
   telefono:string = "";
-  idacquario:number = 1;
+  idacquario:number;
   constructor(public gestore:GestoreService){}
 }

@@ -1,11 +1,10 @@
-form (submit)="gestore.insertisemplice(idintervento, idpersonale); idintervento = idpersonale = 1;">
+<form (submit)="gestore.insertISemplice(idintervento, idpersonale); idintervento = idpersonale = 1;">
     <mat-form-field>
         <input
         matInput
         type="number"
         name="IDIntervento"
         required
-        minlength="4"
         placeholder="IDIntervento"
         [(ngModel)]="idintervento">
     </mat-form-field>
@@ -16,7 +15,6 @@ form (submit)="gestore.insertisemplice(idintervento, idpersonale); idintervento 
         type="number"
         name="IDPersonale"
         required
-        minlength="4"
         placeholder="IDPersonale"
         [(ngModel)]="idpersonale">
     </mat-form-field>
